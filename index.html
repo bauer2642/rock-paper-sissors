@@ -7,25 +7,64 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>rock,paper,scissors</h1>
     <script>
-    function computerChoice(){
+    function getComputerChoice(){
         let randomNumber = Math.floor(Math.random() * 3)
         if (randomNumber === 0) {
-        return "rock";}
-
+        return "rock"
+        }
         else if (randomNumber === 1){
-        return "paper";}
-
+        return "paper"
+        }
         else if (randomNumber === 2){
-        return "sissors";
+        return "scissors";
         }
     }
     const playerChoice = "rock"
-    const computerChoice = computerChoice()
-    console.log(computerChoice())
-    console.log(playerChoice)
-    //function playRound()S
+    const computerChoice = getComputerChoice()
+    
+    function playRound(computerChoice, playerChoice){
+        if (computerChoice === playerChoice) {
+            console.log("Woah it's a tie guy!")
+        } else if (computerChoice === "rock") {
+            if (playerChoice === "paper") {
+                console.log("You win guy!")
+                }else {
+                    console.log("guess you lose guy!")
+                }
+        } else if ( computerChoice === "paper") {
+            if (playerChoice === "rock") {
+                console.log("A loss my guy!") 
+             } else {
+                console.log("Big Victory Guy!")
+                    }
+            
+        } else if (computerChoice === "scissors") {
+            if (playerChoice === "paper") {
+                console.log("maybe try another game you lost!") 
+            }else {
+                 console.log("Nice one guy you won!")
+                    }
+        
+        } else {
+            console.log("error")
+        }
+        
+
+    }
+
+    function game() {
+        const playerScore = 0;
+        const computerScore = 0;
+        for (let i = 0; i < 5; i++) {
+           const outcome = playRound(computerChoice, playerChoice) 
+           console.log(outcome)
+           console.log(computerChoice)
+           console.log(playerChoice)
+        }
+    }
+      game()  
+
    
     </script>
 </body>
