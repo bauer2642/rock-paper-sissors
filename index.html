@@ -7,34 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>rock,paper,scissors</h1>
     <script>
     function computerChoice(){
         let randomNumber = Math.floor(Math.random() * 3)
         if (randomNumber === 0) {
-        alert("rock");}
+        return "rock";}
 
         else if (randomNumber === 1){
-        alert("paper");}
+        return "paper";}
 
         else if (randomNumber === 2){
-        alert("sissors");
+        return "sissors";
         }
     }
-    function playersChoice(){
-        let playerChoice = prompt( 0, 1, 2)
-        if (playersChoice === 0) {
-            alert ("rock");
-        }
-        else if (playersChoice === 1){
-            alert("paper");
-        }
-        else if (playerChoice === 2){
-            alert("sissors");
-        }
-        
-    }
-    playersChoice()
-
+    const playerChoice = "rock"
+    const computerChoice = computerChoice()
+    console.log(computerChoice())
+    console.log(playerChoice)
+    //function playRound()S
+   
     </script>
 </body>
 </html>
